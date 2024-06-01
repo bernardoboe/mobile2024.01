@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src * data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Pizzarias</title>
+</head>
+<body>
+    <div id="applista" class="app-lista">
+        <div class="superior" id="listaPizzas"></div>
+        <div class="inferior">
+            <button id="btnNovo" class="botao-novo btn-switch-screen" data-origin-screen="applista" data-next-screen="appcadastro">Novo</button>
+        </div>
+    </div>
+    <div class="app-cadastro" id="appcadastro">
+        <div class="imagem" id="imagem"></div>
+        <div class="form">
+            <div class="form-linha">
+                <div class="form-linha-esq">Pizza:</div>
+                <div class="form-linha-dir">
+                    <input type="text" name="pizza" id="pizza">
+                </div>
+            </div>
+            <div class="form-linha">
+                <div class="form-linha-esq">Preço:</div>
+                <div class="form-linha-dir">
+                    <input type="number" name="preco" id="preco">
+                </div>
+            </div>
+        </div>
+        <div class="botoes">
+            <button id="btnFoto" class="botao">Foto</button>
+            <button id="btnSalvar" class="botao" data-origin-screen="appcadastro" data-next-screen="applista">Salvar</button>
+            <button id="btnExcluir" class="botao" data-origin-screen="appcadastro" data-next-screen="applista">Excluir</button>
+            <button id="btnCancelar" class="botao" data-origin-screen="appcadastro" data-next-screen="applista">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
